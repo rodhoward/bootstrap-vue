@@ -51,7 +51,7 @@ module.exports = function nuxtBootstrapVue(moduleOptions = {}) {
     )
     if (bootstrapVueCSS) {
       // Add BootstrapVue CSS
-      this.options.css.unshift('bootstrap-vue/dist/bootstrap-vue.css')
+      this.options.css.unshift('bootstrap-vue/dist/bootstrap-vue3-compat.css')
     }
 
     const bootstrapCSS = pickFirst(
@@ -176,7 +176,7 @@ module.exports = function nuxtBootstrapVue(moduleOptions = {}) {
     // Register plugin, passing options to plugin template
     this.addPlugin({
       src: resolve(__dirname, 'plugin.template.js'),
-      fileName: 'bootstrap-vue.js',
+      fileName: 'bootstrap-vue3-compat.js',
       options: templateOptions
     })
   })

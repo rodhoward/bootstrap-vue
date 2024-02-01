@@ -1053,8 +1053,8 @@ formatted value as a string (HTML strings are not supported)
 
 ## Header and Footer custom rendering via scoped slots
 
-It is also possible to provide custom rendering for the table's `thead` and `tfoot` elements. Note by
-default the table footer is not rendered unless `foot-clone` is set to `true`.
+It is also possible to provide custom rendering for the table's `thead` and `tfoot` elements. Note
+by default the table footer is not rendered unless `foot-clone` is set to `true`.
 
 Scoped slots for the header and footer cells uses a special naming convention of
 `'head(<fieldkey>)'` and `'foot(<fieldkey>)'` respectively. if a `'foot(...)'` slot for a field is

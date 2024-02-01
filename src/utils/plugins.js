@@ -13,7 +13,7 @@ export const checkMultipleVue = (() => {
   const MULTIPLE_VUE_WARNING = [
     'Multiple instances of Vue detected!',
     'You may need to set up an alias for Vue in your bundler config.',
-    'See: https://bootstrap-vue.org/docs#using-module-bundlers'
+    'See: https://bootstrap-vue3-compat.org/docs#using-module-bundlers'
   ].join('\n')
 
   return Vue => {
@@ -32,19 +32,12 @@ export const checkMultipleVue = (() => {
  */
 export const installFactory = ({ components, directives, plugins } = {}) => {
   const install = (Vue, config = {}) => {
-    if (install.installed) {
-      /* istanbul ignore next */
-      return
-    }
-    install.installed = true
     checkMultipleVue(Vue)
     setConfig(config, Vue)
     registerComponents(Vue, components)
     registerDirectives(Vue, directives)
     registerPlugins(Vue, plugins)
   }
-
-  install.installed = false
 
   return install
 }

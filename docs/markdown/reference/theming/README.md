@@ -5,9 +5,9 @@
 
 While BootstrapVue uses Bootstrap's CSS, certain features of BootstrapVue use custom CSS (i.e.
 stacked tables, etc.). Our custom CSS relies on variables defined the Bootstrap v4.x SCSS. The
-`bootstrap-vue/dist/bootstrap-vue.css` is compiled using the default Bootstrap v4.x variables. By
-using the BootstrapVue source SCSS, you can have your variable overrides (such as breakpoints, theme
-colors, etc.) adjust the custom BootstrapVue css generation.
+`bootstrap-vue/dist/bootstrap-vue3-compat.css` is compiled using the default Bootstrap v4.x
+variables. By using the BootstrapVue source SCSS, you can have your variable overrides (such as
+breakpoints, theme colors, etc.) adjust the custom BootstrapVue css generation.
 
 For premium dashboards and themes, please refer to the [`Themes section`](/themes) of the
 documentation.

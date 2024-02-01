@@ -134,7 +134,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 // Import Bootstrap and BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap-vue/dist/bootstrap-vue3-compat.css'
 
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
@@ -445,7 +445,7 @@ yarn add bootstrap-vue
 
 Add `bootstrap-vue/nuxt` to modules section of your **`nuxt.config.js`** file.
 
-This will include both `bootstrap.css` and `bootstrap-vue.css` default pre-compiled CSS.
+This will include both `bootstrap.css` and `bootstrap-vue3-compat.css` default pre-compiled CSS.
 
 ```js
 module.exports = {
@@ -671,7 +671,7 @@ import Vue from 'vue'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap-vue/dist/bootstrap-vue3-compat.css'
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
@@ -713,17 +713,17 @@ JavaScript files.
 
 <!-- Load required Bootstrap and BootstrapVue CSS -->
 <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap@{{ bootstrapVersion }}/dist/css/bootstrap.min.css" />
-<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat.min.css" />
 
 <!-- Load polyfills to support older browsers -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
 
 <!-- Load Vue followed by BootstrapVue -->
 <script src="https://unpkg.com/vue@{{ vueVersion }}/dist/vue.min.js"></script>
-<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat.min.js"></script>
 
 <!-- Load the following for BootstrapVueIcons support -->
-<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat-icons.min.js"></script>
 ```
 
 ## Build variants
@@ -731,12 +731,12 @@ JavaScript files.
 Choosing the best variant for your build environment / packager helps reduce bundle sizes. If your
 bundler supports esm modules, it will automatically prefer it over commonjs.
 
-| Variant        | Environments           | Tree Shake | Package path                                                           |
-| -------------- | ---------------------- | ---------- | ---------------------------------------------------------------------- |
-| **ESM module** | webpack 2+ / rollup.js | Yes        | `esm/index.js`                                                         |
-| ESM bundle     | webpack 2+ / rollup.js | Yes        | `dist/bootstrap-vue.esm.js`                                            |
-| commonjs2      | webpack 1 / ...        | No         | `dist/bootstrap-vue.common.js` _or_ `dist/bootstrap-vue.common.min.js` |
-| UMD            | Browser                | No         | `dist/bootstrap-vue.js` _or_ `dist/bootstrap-vue.min.js`               |
+| Variant        | Environments           | Tree Shake | Package path                                                                           |
+| -------------- | ---------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| **ESM module** | webpack 2+ / rollup.js | Yes        | `esm/index.js`                                                                         |
+| ESM bundle     | webpack 2+ / rollup.js | Yes        | `dist/bootstrap-vue3-compat.esm.js`                                                    |
+| commonjs2      | webpack 1 / ...        | No         | `dist/bootstrap-vue3-compat.common.js` _or_ `dist/bootstrap-vue3-compat.common.min.js` |
+| UMD            | Browser                | No         | `dist/bootstrap-vue3-compat.js` _or_ `dist/bootstrap-vue3-compat.min.js`               |
 
 Note the UMD (browser) variant **does not** include BootstrapVue [icons](/docs/icons) support. All
 other variants listed above _do include_ the `BootstrapVueIcons` (`IconsPlugin`) plugin (note the
@@ -745,11 +745,11 @@ icons plugin is not automatically installed, and must explicitly installed via `
 
 Icons only modules:
 
-| Variant        | Environments           | Tree Shake | Package path                                                                       |
-| -------------- | ---------------------- | ---------- | ---------------------------------------------------------------------------------- |
-| **ESM bundle** | webpack 2+ / rollup.js | Yes        | `dist/bootstrap-vue-icons.esm.js`                                                  |
-| commonjs2      | webpack 1 / ...        | No         | `dist/bootstrap-vue-icons.common.js` _or_ `dist/bootstrap-vue-icons.common.min.js` |
-| UMD            | Browser                | No         | `dist/bootstrap-vue-icons.js` _or_ `dist/bootstrap-vue-icons.min.js`               |
+| Variant        | Environments           | Tree Shake | Package path                                                                                       |
+| -------------- | ---------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
+| **ESM bundle** | webpack 2+ / rollup.js | Yes        | `dist/bootstrap-vue3-compat-icons.esm.js`                                                          |
+| commonjs2      | webpack 1 / ...        | No         | `dist/bootstrap-vue3-compat-icons.common.js` _or_ `dist/bootstrap-vue3-compat-icons.common.min.js` |
+| UMD            | Browser                | No         | `dist/bootstrap-vue3-compat-icons.js` _or_ `dist/bootstrap-vue3-compat-icons.min.js`               |
 
 The `ESM` module build and the `ESM` bundles (single file) are
 [tree-shakeable](#tree-shaking-with-module-bundlers), but you will experience smaller final bundle

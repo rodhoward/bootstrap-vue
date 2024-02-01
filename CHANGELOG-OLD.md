@@ -367,8 +367,8 @@ Released 2019-05-31
   - Simplified import format for importing components, directives, plugins:<br>
     `import { ModalPlugin, CardPlugin, BAlert, BRow, BCol, VBScrollspyPlugin } from 'bootstrap-vue'`
   - New `esm/` modular build with top-level named exports (tree shakeable)
-  - New `dist/bootstrap-vue.esm.js` esm bundle with top-level named exports
-  - New `dist/bootstrap-vue.common.js` cjs bundle with top-level named exports
+  - New `dist/bootstrap-vue3-compat.esm.js` esm bundle with top-level named exports
+  - New `dist/bootstrap-vue3-compat.common.js` cjs bundle with top-level named exports
   - No need to cherry-pick from sub directories for plugins/components/directives
   - Most package bundlers will pick the appropriate build automatically
 - Nuxt module:
@@ -2454,7 +2454,8 @@ Notable changes:
 v1.0.0 introduces a new source code structure. For those users that are importing individual
 components, the path to the individual components has changed. Please reference the
 [GitHub repo](https://github.com/bootstrap-vue/bootstrap-vue/) and
-[documentation](https://bootstrap-vue.org/docs) for the new structure and information on importing.
+[documentation](https://bootstrap-vue3-compat.org/docs) for the new structure and information on
+importing.
 
 ### Bug Fixes v1.0.0
 

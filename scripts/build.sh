@@ -39,54 +39,54 @@ echo ''
 echo 'Minify JS...'
 # We instruct terser to preserve our `Bv*Event` class names and
 # safe types (i.e. `Element`, etc.) when mangling top level names
-terser dist/bootstrap-vue.js \
+terser dist/bootstrap-vue3-compat.js \
     --compress typeofs=false \
     --mangle reserved=['BvEvent','BvModalEvent','Element','HTMLElement','SVGElement'] \
     --toplevel \
     --keep-classnames \
     --comments "/^!/" \
-    --source-map "content=dist/bootstrap-vue.js.map,includeSources,url=bootstrap-vue.min.js.map" \
-    --output dist/bootstrap-vue.min.js
-terser dist/bootstrap-vue-icons.js \
+    --source-map "content=dist/bootstrap-vue3-compat.js.map,includeSources,url=bootstrap-vue3-compat.min.js.map" \
+    --output dist/bootstrap-vue3-compat.min.js
+terser dist/bootstrap-vue3-compat-icons.js \
     --compress typeofs=false \
     --mangle reserved=['BvEvent','BvModalEvent','Element','HTMLElement','SVGElement'] \
     --toplevel \
     --keep-classnames \
     --comments "/^!/" \
-    --source-map "content=dist/bootstrap-vue-icons.js.map,includeSources,url=bootstrap-vue-icons.min.js.map" \
-    --output dist/bootstrap-vue-icons.min.js
-terser dist/bootstrap-vue.common.js \
+    --source-map "content=dist/bootstrap-vue3-compat-icons.js.map,includeSources,url=bootstrap-vue3-compat-icons.min.js.map" \
+    --output dist/bootstrap-vue3-compat-icons.min.js
+terser dist/bootstrap-vue3-compat.common.js \
     --compress typeofs=false \
     --mangle reserved=['BvEvent','BvModalEvent','Element','HTMLElement','SVGElement'] \
     --toplevel \
     --keep-classnames \
     --comments "/^!/" \
-    --source-map "content=dist/bootstrap-vue.common.js.map,includeSources,url=bootstrap-vue.common.min.js.map" \
-    --output dist/bootstrap-vue.common.min.js
-terser dist/bootstrap-vue-icons.common.js \
+    --source-map "content=dist/bootstrap-vue3-compat.common.js.map,includeSources,url=bootstrap-vue3-compat.common.min.js.map" \
+    --output dist/bootstrap-vue3-compat.common.min.js
+terser dist/bootstrap-vue3-compat-icons.common.js \
     --compress typeofs=false \
     --mangle reserved=['BvEvent','BvModalEvent','Element','HTMLElement','SVGElement'] \
     --toplevel \
     --keep-classnames \
     --comments "/^!/" \
-    --source-map "content=dist/bootstrap-vue-icons.common.js.map,includeSources,url=bootstrap-vue-icons.common.min.js.map" \
-    --output dist/bootstrap-vue-icons.common.min.js
-terser dist/bootstrap-vue.esm.js \
+    --source-map "content=dist/bootstrap-vue3-compat-icons.common.js.map,includeSources,url=bootstrap-vue3-compat-icons.common.min.js.map" \
+    --output dist/bootstrap-vue3-compat-icons.common.min.js
+terser dist/bootstrap-vue3-compat.esm.js \
     --compress typeofs=false \
     --mangle reserved=['BvEvent','BvModalEvent','Element','HTMLElement','SVGElement'] \
     --toplevel \
     --keep-classnames \
     --comments "/^!/" \
-    --source-map "content=dist/bootstrap-vue.esm.js.map,includeSources,url=bootstrap-vue.esm.min.js.map" \
-    --output dist/bootstrap-vue.esm.min.js
-terser dist/bootstrap-vue-icons.esm.js \
+    --source-map "content=dist/bootstrap-vue3-compat.esm.js.map,includeSources,url=bootstrap-vue3-compat.esm.min.js.map" \
+    --output dist/bootstrap-vue3-compat.esm.min.js
+terser dist/bootstrap-vue3-compat-icons.esm.js \
     --compress typeofs=false \
     --mangle reserved=['BvEvent','BvModalEvent','Element','HTMLElement','SVGElement'] \
     --toplevel \
     --keep-classnames \
     --comments "/^!/" \
-    --source-map "content=dist/bootstrap-vue-icons.esm.js.map,includeSources,url=bootstrap-vue-icons.esm.min.js.map" \
-    --output dist/bootstrap-vue-icons.esm.min.js
+    --source-map "content=dist/bootstrap-vue3-compat-icons.esm.js.map,includeSources,url=bootstrap-vue3-compat-icons.esm.min.js.map" \
+    --output dist/bootstrap-vue3-compat-icons.esm.min.js
 echo 'Done.'
 echo ''
 
@@ -96,17 +96,17 @@ SASS_PATH=node_modules sass --style expanded \
     --embed-source-map \
     --precision 6 \
     scripts/index.scss \
-    dist/bootstrap-vue.css
+    dist/bootstrap-vue3-compat.css
 postcss --config scripts/postcss.config.js \
-    --replace dist/bootstrap-vue.css
+    --replace dist/bootstrap-vue3-compat.css
 # BootstrapVue Icons only CSS
 SASS_PATH=node_modules sass --style expanded \
     --embed-source-map \
     --precision 6 \
     scripts/icons.scss \
-    dist/bootstrap-vue-icons.css
+    dist/bootstrap-vue3-compat-icons.css
 postcss --config scripts/postcss.config.js \
-    --replace dist/bootstrap-vue-icons.css
+    --replace dist/bootstrap-vue3-compat-icons.css
 echo 'Done.'
 echo ''
 
@@ -116,15 +116,15 @@ cleancss --level 1 \
     --format breaksWith=lf \
     --source-map \
     --source-map-inline-sources \
-    --output dist/bootstrap-vue.min.css \
-    dist/bootstrap-vue.css
+    --output dist/bootstrap-vue3-compat.min.css \
+    dist/bootstrap-vue3-compat.css
 # Icons only CSS
 cleancss --level 1 \
     --format breaksWith=lf \
     --source-map \
     --source-map-inline-sources \
-    --output dist/bootstrap-vue-icons.min.css \
-    dist/bootstrap-vue-icons.css
+    --output dist/bootstrap-vue3-compat-icons.min.css \
+    dist/bootstrap-vue3-compat-icons.css
 echo 'Done.'
 echo ''
 

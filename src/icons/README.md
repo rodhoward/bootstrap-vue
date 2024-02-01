@@ -104,7 +104,7 @@ import the required icons CSS, rather than the full Bootstrap and BootstrapVue S
 
 ```js
 import { BootstrapVueIcons } from 'bootstrap-vue'
-import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue3-compat-icons.min.css'
 
 Vue.use(BootstrapVueIcons)
 ```
@@ -131,11 +131,11 @@ icons library:
 ```html
 <head>
   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap@{{ bootstrapVersion }}/dist/css/bootstrap.min.css" />
-  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat.min.css" />
   <!-- Load Vue followed by BootstrapVue, and BootstrapVueIcons -->
   <script src="//unpkg.com/vue@{{ vueVersion }}/dist/vue.min.js"></script>
-  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
-  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat-icons.min.js"></script>
 </head>
 ```
 
@@ -144,10 +144,10 @@ If using just the icons:
 ```html
 <head>
   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap@{{ bootstrapVersion }}/dist/css/bootstrap.min.css" />
-  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.css" />
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat-icons.min.css" />
   <!-- Load Vue followed by BootstrapVueIcons -->
   <script src="//unpkg.com/vue@{{ vueVersion }}/dist/vue.min.js"></script>
-  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat-icons.min.js"></script>
 </head>
 ```
 
@@ -514,7 +514,7 @@ class to the icon component, or create a new animation class in the form of
   `prefers-reduced-motion` media query. See the
   [reduced motion section of our accessibility documentation](/docs/reference/accessibility#reduced-motion)
   for additional details.
-- The `cylon` animation gets its name from the "eye" of the Cylons from the *original*
+- The `cylon` animation gets its name from the "eye" of the Cylons from the _original_
   [1978 Battlestar Galactica TV series](https://www.youtube.com/watch?v=5a5bEIf0UaU).
 
 ## Stacking icons

@@ -423,13 +423,13 @@ export default {
         extendedJs,
         externalCss: [
           `//unpkg.com/bootstrap@${bootstrapVersion}/dist/css/bootstrap.min.css`,
-          `//unpkg.com/bootstrap-vue@${bootstrapVueVersion}/dist/bootstrap-vue.css`
+          `//unpkg.com/bootstrap-vue@${bootstrapVueVersion}/dist/bootstrap-vue3-compat.css`
         ],
         externalJs: [
           '//unpkg.com/babel-polyfill/dist/polyfill.min.js',
           `//unpkg.com/vue@${vueVersion}/dist/vue.min.js`,
-          `//unpkg.com/bootstrap-vue@${bootstrapVueVersion}/dist/bootstrap-vue.js`,
-          `//unpkg.com/bootstrap-vue@${bootstrapVueVersion}/dist/bootstrap-vue-icons.js`
+          `//unpkg.com/bootstrap-vue@${bootstrapVueVersion}/dist/bootstrap-vue3-compat.js`,
+          `//unpkg.com/bootstrap-vue@${bootstrapVueVersion}/dist/bootstrap-vue3-compat-icons.js`
         ]
       }
     },
@@ -476,7 +476,7 @@ export default {
         "import App from './App'",
         '',
         "import 'bootstrap/dist/css/bootstrap.css'",
-        "import 'bootstrap-vue/dist/bootstrap-vue.css'",
+        "import 'bootstrap-vue/dist/bootstrap-vue3-compat.css'",
         '',
         'Vue.use(BootstrapVue)',
         'Vue.use(BootstrapVueIcons)',

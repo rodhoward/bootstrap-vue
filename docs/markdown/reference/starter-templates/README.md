@@ -31,7 +31,7 @@ tags to load the required JavaScript and CSS in your page.
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"
+      href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat.css"
     />
 
     <!-- Load polyfills to support older browsers -->
@@ -39,7 +39,7 @@ tags to load the required JavaScript and CSS in your page.
 
     <!-- Required scripts -->
     <script src="https://unpkg.com/vue@[[ vueVersion ]]/dist/vue.js"></script>
-    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue3-compat.js"></script>
   </head>
   <body>
     <!-- Our application root element -->
@@ -47,7 +47,7 @@ tags to load the required JavaScript and CSS in your page.
       <b-container>
         <b-jumbotron header="BootstrapVue" lead="Bootstrap v4 Components for Vue.js 2">
           <p>For more information visit our website</p>
-          <b-btn variant="primary" href="https://bootstrap-vue.org/">More Info</b-btn>
+          <b-btn variant="primary" href="https://bootstrap-vue3-compat.org/">More Info</b-btn>
         </b-jumbotron>
 
         <b-form-group
